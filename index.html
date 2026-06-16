@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Del Manuel Cruz — Business Analyst &amp; AI Builder</title>
+<meta name="description" content="Del Manuel Cruz — a Business Analyst who builds real AI products. Creator of TrajectIQ™. Selected work, experience, and skills.">
+<meta property="og:title" content="Del Manuel Cruz — Business Analyst & AI Builder">
+<meta property="og:description" content="A Business Analyst who builds real AI products. Creator of TrajectIQ™.">
+<meta property="og:image" content="trajectiq-hero.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B0711">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%239D4EDD'/%3E%3Cstop offset='.55' stop-color='%23C8198A'/%3E%3Cstop offset='1' stop-color='%23E8440E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230B0711'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='url(%23g)' text-anchor='middle'%3EDC%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.className='js';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#0B0711;--bg2:#140B1C;--ink:#F5EFF7;--muted:#A99FB4;--dim:#6E6182;
+ --line:rgba(255,255,255,0.09);--faint:rgba(255,255,255,0.045);
+ --p1:#9D4EDD;--p2:#C8198A;--p3:#E8440E;
+ --grad:linear-gradient(100deg,var(--p1),var(--p2) 55%,var(--p3));
+ --serif:'Fraunces',Georgia,serif;--sans:'Hanken Grotesk',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+/* grain */
+body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0.04;mix-blend-mode:overlay;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:rgba(200,25,138,0.35);color:#fff}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:#0B0711}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#9D4EDD,#C8198A,#E8440E);border-radius:8px;border:3px solid #0B0711}
+a{color:inherit;text-decoration:none}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+
+/* scroll progress */
+.progress{position:fixed;top:0;left:0;height:2.5px;width:0;background:var(--grad);z-index:60;transition:width .08s linear;box-shadow:0 0 12px rgba(200,25,138,.6)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;
+ padding:16px clamp(20px,5vw,52px);backdrop-filter:blur(14px);background:rgba(11,7,17,0.55);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+.nav.scrolled{border-bottom:1px solid var(--line);background:rgba(11,7,17,0.82)}
+.mark{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:1.05rem;font-weight:500}
+.mark .badge{width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-family:var(--serif);font-size:.82rem;font-weight:600;color:#fff;transition:transform .25s}
+.mark:hover .badge{transform:rotate(-8deg) scale(1.06)}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{font-size:.84rem;color:var(--muted);padding:8px 12px;border-radius:8px;transition:color .2s,background .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);background:var(--faint)}
+.nav-cta{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:9px 15px;border-radius:999px;color:var(--ink);transition:border-color .2s,transform .2s}
+.nav-cta:hover{border-color:var(--p2);transform:translateY(-1px)}
+@media(max-width:760px){.nav-links{display:none}}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,52px);position:relative;z-index:2}
+
+/* ---------- hero with aurora ---------- */
+.hero-zone{position:relative;overflow:hidden}
+.aurora{position:absolute;inset:-20% -10%;z-index:0;pointer-events:none;filter:blur(70px);opacity:.55}
+.aurora i{position:absolute;border-radius:50%}
+.aurora i:nth-child(1){width:46vw;height:46vw;min-width:420px;min-height:420px;left:-8%;top:-12%;background:radial-gradient(circle,rgba(157,78,221,.5),transparent 65%);animation:drift1 22s ease-in-out infinite alternate}
+.aurora i:nth-child(2){width:38vw;height:38vw;min-width:360px;min-height:360px;right:-6%;top:-4%;background:radial-gradient(circle,rgba(200,25,138,.42),transparent 65%);animation:drift2 26s ease-in-out infinite alternate}
+.aurora i:nth-child(3){width:30vw;height:30vw;min-width:300px;min-height:300px;left:38%;top:34%;background:radial-gradient(circle,rgba(232,68,14,.25),transparent 65%);animation:drift3 30s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(9%,14%) scale(1.12)}}
+@keyframes drift2{to{transform:translate(-12%,10%) scale(.92)}}
+@keyframes drift3{to{transform:translate(-8%,-12%) scale(1.18)}}
+.hero{position:relative;z-index:2;padding:clamp(130px,18vh,200px) 0 70px}
+.avail{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+ border:1px solid var(--line);border-radius:999px;padding:7px 14px;margin-bottom:30px;backdrop-filter:blur(6px);background:rgba(11,7,17,.35)}
+.avail .dot{width:7px;height:7px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 0 rgba(61,220,132,0.5);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,0.45)}70%{box-shadow:0 0 0 7px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+.hero-eyebrow{color:var(--muted);margin-bottom:18px}
+.hero-eyebrow .rotator{display:inline-block;color:var(--ink);min-width:15ch;text-align:left}
+.hero-eyebrow .rotator span{display:inline-block;animation:wordIn .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes wordIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.4rem,10vw,7rem);line-height:.93;letter-spacing:-.025em;margin-bottom:26px}
+.hero h1 .dot-end{font-style:italic}
+.hero .lede{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.4rem,3vw,2.15rem);line-height:1.22;color:var(--ink);max-width:760px;margin-bottom:20px}
+.hero .lede .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .sub{color:var(--muted);max-width:600px;font-size:1.02rem;margin-bottom:34px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:11px;font-size:.92rem;font-weight:600;cursor:pointer;transition:transform .18s,box-shadow .25s,border-color .2s,background .2s}
+.btn .ar{transition:transform .2s}.btn:hover .ar{transform:translate(3px,-3px)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 30px rgba(200,25,138,0.32)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(200,25,138,0.5)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);backdrop-filter:blur(6px)}
+.btn-ghost:hover{border-color:var(--p2);background:var(--faint);transform:translateY(-2px)}
+
+/* metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:36px;backdrop-filter:blur(8px)}
+@media(max-width:680px){.metrics{grid-template-columns:repeat(2,1fr)}}
+.metric{background:rgba(11,7,17,.72);padding:24px 20px;transition:background .3s;position:relative;overflow:hidden}
+.metric::after{content:"";position:absolute;inset:0;opacity:0;background:radial-gradient(220px 160px at var(--mx,50%) var(--my,50%),rgba(200,25,138,0.16),transparent 70%);transition:opacity .3s;pointer-events:none}
+.metric:hover{background:rgba(20,11,28,.85)}
+.metric:hover::after{opacity:1}
+.metric .n{font-family:var(--serif);font-size:2.3rem;line-height:1;font-weight:500;margin-bottom:8px}
+.metric .l{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- ticker ---------- */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:15px 0;position:relative;z-index:2;
+ -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.ticker-track{display:flex;width:max-content;animation:ticker 36s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+@keyframes ticker{to{transform:translateX(-50%)}}
+.tk{display:flex;align-items:center;gap:26px;padding-right:26px}
+.tk span{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);white-space:nowrap}
+.tk i{width:5px;height:5px;border-radius:50%;background:var(--grad);flex:none}
+
+/* ---------- sections ---------- */
+section{padding:clamp(70px,11vh,120px) 0 0;scroll-margin-top:72px;position:relative}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:38px;border-bottom:1px solid var(--line);padding-bottom:16px;position:relative;z-index:2}
+.sec-num{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,4.2vw,2.7rem);letter-spacing:-.01em}
+.sec-head h2 em{font-style:italic}
+.ghost{position:absolute;top:-30px;right:-10px;z-index:0;font-family:var(--serif);font-weight:600;font-size:clamp(7rem,17vw,12rem);line-height:1;color:transparent;
+ -webkit-text-stroke:1px rgba(255,255,255,.055);pointer-events:none;user-select:none}
+
+/* featured card */
+.feature{position:relative;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(160deg,rgba(157,78,221,0.10),rgba(20,11,28,0.6));
+ display:grid;grid-template-columns:1.05fr 1fr;transition:transform .3s,box-shadow .3s,border-color .3s;z-index:2}
+.feature::after{content:"";position:absolute;inset:0;opacity:0;z-index:1;pointer-events:none;
+ background:radial-gradient(440px 340px at var(--mx,50%) var(--my,50%),rgba(200,25,138,0.13),transparent 70%);transition:opacity .3s}
+.feature:hover{transform:translateY(-4px);box-shadow:0 34px 80px rgba(8,4,14,0.6);border-color:rgba(200,25,138,0.42)}
+.feature:hover::after{opacity:1}
+@media(max-width:780px){.feature{grid-template-columns:1fr}}
+.shot-wrap{position:relative;overflow:hidden;min-height:280px;border-right:1px solid var(--line)}
+@media(max-width:780px){.shot-wrap{border-right:none;border-bottom:1px solid var(--line)}}
+.shot-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.feature:hover .shot-wrap img{transform:scale(1.045)}
+/* floating stat pills over the image */
+.pill{position:absolute;z-index:3;font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;
+ background:rgba(11,7,17,.62);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 13px;backdrop-filter:blur(8px);
+ animation:bob 5.5s ease-in-out infinite}
+.pill b{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:600}
+.pill.p-a{top:14px;left:14px;animation-delay:0s}
+.pill.p-b{bottom:48px;right:14px;animation-delay:1.4s}
+.pill.p-c{bottom:12px;left:14px;animation-delay:2.8s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.fc{padding:clamp(26px,4vw,38px);position:relative;z-index:2}
+.fc .kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:12px;font-weight:600}
+.fc h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,3.4vw,2.2rem);margin-bottom:12px}
+.fc p{color:var(--muted);margin-bottom:18px;font-size:.97rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--ink);background:var(--faint);border:1px solid var(--line);border-radius:7px;padding:6px 11px;transition:border-color .2s,transform .2s,box-shadow .2s}
+.chip:hover{border-color:var(--p2);transform:translateY(-1px);box-shadow:0 4px 14px rgba(200,25,138,.18)}
+.fc .btns{margin-top:22px}
+.feature.stacked{grid-template-columns:1fr}
+.feature.stacked .banner-wrap{height:228px;overflow:hidden;border-bottom:1px solid var(--line);background:#F7F4ED;position:relative}
+.feature.stacked .banner-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s}
+.feature.stacked:hover .banner-wrap img{transform:scale(1.03)}
+.feature.stacked .banner-wrap.hoops-banner{background:radial-gradient(700px 280px at 85% 12%,rgba(245,132,38,.32),transparent 60%),linear-gradient(160deg,#001B33,#006BB6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center}
+.hoops-banner .hb-eyebrow{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;color:rgba(255,255,255,.62)}
+.hoops-banner .hb-score{font-family:var(--serif);font-size:2.6rem;font-weight:600;color:#fff;letter-spacing:.02em}
+.hoops-banner .hb-score span{color:#FF9A3D}
+.hoops-banner .hb-title{font-family:var(--mono);font-size:.74rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.feature.stacked .banner-wrap.mc-banner{background:radial-gradient(600px 260px at 82% 6%,rgba(232,68,14,.30),transparent 60%),linear-gradient(135deg,#2a0f52,#7D2AB8 52%,#C8198A);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center}
+.mc-banner .mc-eyebrow{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.mc-banner .mc-stats{display:flex;gap:34px;flex-wrap:wrap;justify-content:center}
+.mc-banner .mc-stats div{display:flex;flex-direction:column}
+.mc-banner .mc-stats .v{font-family:var(--serif);font-size:1.8rem;font-weight:600;color:#fff}
+.mc-banner .mc-stats .v span{color:#FFC56B}
+.mc-banner .mc-stats .k{font-family:var(--mono);font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:2px}
+.mc-banner .mc-title{font-family:var(--mono);font-size:.7rem;letter-spacing:.38em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-top:4px}
+.banner-wrap .bw-cap{position:absolute;left:0;right:0;bottom:0;font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:linear-gradient(0deg,rgba(11,7,17,.78),transparent);padding:18px 14px 9px;text-align:left}
+
+/* about */
+.about-lede{font-family:var(--serif);font-weight:300;font-size:clamp(1.3rem,2.8vw,1.8rem);line-height:1.45;color:var(--ink);max-width:900px;position:relative;z-index:2}
+.about-lede b{font-weight:500;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* ---------- experience timeline ---------- */
+.xp{position:relative;z-index:2}
+.xp::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:1.5px;background:linear-gradient(180deg,var(--p1),var(--p2),var(--p3));opacity:.45}
+.role{position:relative;padding:0 0 38px 38px}
+.role:last-child{padding-bottom:0}
+.role::before{content:"";position:absolute;left:0;top:7px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:2px solid var(--p2);transition:box-shadow .3s,border-color .3s}
+.role:hover::before{border-color:var(--p3);box-shadow:0 0 0 5px rgba(200,25,138,.18)}
+.role-date{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
+.role-title{font-family:var(--serif);font-weight:500;font-size:1.45rem;color:var(--ink)}
+.role-org{color:var(--p2);font-weight:600;font-size:.92rem;margin:3px 0 13px}
+.role-points{list-style:none;display:grid;gap:9px}
+.role-points li{position:relative;padding-left:18px;font-size:.95rem;color:var(--muted)}
+.role-points li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--grad)}
+.role-points b{color:var(--ink);font-weight:600}
+.pt-link{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:600;white-space:nowrap}
+.pt-link:hover{text-decoration:underline;-webkit-text-fill-color:var(--p2)}
+
+/* skills */
+.skill-group{display:grid;grid-template-columns:170px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line);align-items:start;position:relative;z-index:2}
+@media(max-width:680px){.skill-group{grid-template-columns:1fr;gap:10px}}
+.skill-key{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);padding-top:6px}
+.skill-group .chips .chip{font-size:.74rem;padding:7px 12px;border-radius:999px}
+
+/* education */
+.edu{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border:1px solid var(--line);border-radius:14px;padding:22px 24px;background:var(--bg2);position:relative;z-index:2}
+.edu b{font-family:var(--serif);font-weight:500;font-size:1.15rem}
+.edu .where{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+
+/* contact */
+.contact{text-align:center;padding:clamp(90px,15vh,140px) 0 40px}
+.contact .small{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:24px}
+.contact .big{font-family:var(--serif);font-weight:300;font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:28px}
+.contact .big a{position:relative;font-style:italic}
+.contact .big a::after{content:"";position:absolute;left:0;bottom:.06em;width:100%;height:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.contact .big a:hover::after{transform:scaleX(1)}
+.copy-email{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:10px 18px;cursor:pointer;background:none;transition:border-color .2s,color .2s,transform .2s;margin-bottom:28px}
+.copy-email:hover{border-color:var(--p2);color:var(--ink);transform:translateY(-1px)}
+.copy-email.copied{border-color:#3ddc84;color:#3ddc84}
+.foot{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:.74rem;color:var(--muted);padding-top:30px;border-top:1px solid var(--line)}
+.foot a:hover{color:var(--ink)}
+
+/* back to top */
+.top-btn{position:fixed;right:22px;bottom:22px;z-index:45;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(11,7,17,0.8);backdrop-filter:blur(10px);color:var(--ink);font-size:1rem;display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .3s,transform .3s,border-color .2s}
+.top-btn.show{opacity:1;pointer-events:auto;transform:none}
+.top-btn:hover{border-color:var(--p2)}
+
+/* motion */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.js .hero>*{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.js .hero>*:nth-child(1){animation-delay:.05s}.js .hero>*:nth-child(2){animation-delay:.15s}
+.js .hero>*:nth-child(3){animation-delay:.25s}.js .hero>*:nth-child(4){animation-delay:.35s}
+.js .hero>*:nth-child(5){animation-delay:.45s}.js .hero>*:nth-child(6){animation-delay:.55s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){
+ *{animation:none!important;transition:none!important}
+ .js .reveal,.js .hero>*{opacity:1;transform:none}
+ .progress,.aurora{display:none}
+ .ticker-track{animation:none!important;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav class="nav" id="nav">
+  <a class="mark" href="#top"><span class="badge">DC</span> Del Manuel Cruz</a>
+  <div class="nav-links">
+    <a href="#work">Work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+  </div>
+  <a class="nav-cta" href="Del_Manuel_Cruz_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+</nav>
+
+<div class="hero-zone" id="top">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <header class="hero">
+      <span class="avail"><span class="dot"></span>Open to Analyst roles — remote or South Florida</span>
+      <div class="hero-eyebrow mono">I am <span class="rotator" id="rotator"><span>a Business Analyst</span></span></div>
+      <h1>Del Manuel<br>Cruz<span class="grad-text dot-end">.</span></h1>
+      <p class="lede">I build <span class="hl">real AI products</span> — not just slides about them.</p>
+      <p class="sub">Creator of TrajectIQ™, a live AI career-intelligence platform I shipped solo, end-to-end. I turn ambiguous problems into working tools.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="trajectiq.html">View TrajectIQ case study <span class="ar">↗</span></a>
+        <a class="btn btn-ghost" href="mailto:delmanuelcruz@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/delmanuelcruz" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="metrics" id="metrics">
+        <div class="metric"><div class="n grad-text" data-count="5">0</div><div class="l">AI products shipped</div></div>
+        <div class="metric"><div class="n grad-text" data-count="55" data-suffix="+">0</div><div class="l">versioned iterations</div></div>
+        <div class="metric"><div class="n grad-text" data-count="9022" data-prefix="$" data-comma="1">0</div><div class="l">saved for an employer</div></div>
+        <div class="metric"><div class="n grad-text" data-count="0" data-prefix="$">$0</div><div class="l">infrastructure budget</div></div>
+      </div>
+    </header>
+  </div>
+</div>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <div class="tk"><span>SQL</span><i></i><span>Python</span><i></i><span>GA4</span><i></i><span>Tableau</span><i></i><span>Advanced Excel</span><i></i><span>SDLC</span><i></i><span>UAT</span><i></i><span>Gap Analysis</span><i></i><span>Claude API</span><i></i><span>Agentic Workflows</span><i></i><span>Supabase</span><i></i><span>CI/CD</span><i></i></div>
+    <div class="tk"><span>SQL</span><i></i><span>Python</span><i></i><span>GA4</span><i></i><span>Tableau</span><i></i><span>Advanced Excel</span><i></i><span>SDLC</span><i></i><span>UAT</span><i></i><span>Gap Analysis</span><i></i><span>Claude API</span><i></i><span>Agentic Workflows</span><i></i><span>Supabase</span><i></i><span>CI/CD</span><i></i></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section id="work">
+    <div class="ghost" aria-hidden="true">01</div>
+    <div class="sec-head"><span class="sec-num grad-text">01</span><h2>Selected <em>work</em></h2></div>
+
+    <div class="feature reveal spot tilt">
+      <div class="shot-wrap">
+        <img src="trajectiq-hero.png" alt="TrajectIQ — find out which career type you actually are.">
+        <span class="pill p-a"><b>28%</b>&nbsp;visitor → lead</span>
+        <span class="pill p-b"><b>55</b>&nbsp;versioned builds</span>
+        <span class="pill p-c"><b>40+</b>&nbsp;beta users</span>
+      </div>
+      <div class="fc">
+        <div class="kicker">Live product · trajectiq.co</div>
+        <h3>TrajectIQ<span class="grad-text">™</span></h3>
+        <p>A live AI career-intelligence platform I built end-to-end with Claude Code — authentication, a serverless scoring engine that keeps the proprietary logic private, lead capture, and PayPal billing. Zero infrastructure cost.</p>
+        <div class="chips">
+          <span class="chip">Supabase</span><span class="chip">Netlify serverless</span><span class="chip">Claude API</span><span class="chip">OAuth2</span><span class="chip">PayPal</span>
+        </div>
+        <div class="btns">
+          <a class="btn btn-primary" href="https://trajectiq.co" target="_blank" rel="noopener">Visit live site <span class="ar">↗</span></a>
+          <a class="btn btn-ghost" href="trajectiq.html">Read the case study</a>
+          <a class="btn btn-ghost" href="TrajectIQ-Campus-Flyer.pdf" target="_blank" rel="noopener">Campus flyer <span class="ar">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature stacked reveal spot" style="margin-top:22px">
+      <div class="banner-wrap"><img src="ai-hiring-lens-cover.png" alt="The AI Hiring Lens — Morgan Stanley, 2026"></div>
+      <div class="fc">
+        <div class="kicker">Data analysis · Python pipeline</div>
+        <h3>The AI Hiring Lens — Morgan Stanley</h3>
+        <p>I read 20 of Morgan Stanley's live job postings and measured the skills they actually hire for — then scored a real candidate against the role. A Python pipeline (scrape → classify → score → editorial report) with transparent, cited data provenance and a candidate-readiness score.</p>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">Data analysis</span><span class="chip">Web scraping</span><span class="chip">matplotlib</span><span class="chip">Data provenance</span>
+        </div>
+        <div class="btns">
+          <a class="btn btn-primary" href="ai-hiring-lens.html">Read the analysis <span class="ar">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature stacked reveal spot" style="margin-top:22px">
+      <div class="banner-wrap"><img src="sf-crime-map.png" alt="Tableau neighborhood crime map of San Francisco"><span class="bw-cap">Tableau · SF neighborhood incident map</span></div>
+      <div class="fc">
+        <div class="kicker">Team data analysis · SQL · Python · Tableau</div>
+        <h3>Addressing Crime in San Francisco</h3>
+        <p>With a five-person team, I analyzed a year of San Francisco's incident data — SQL for extraction and cleaning, Python for statistics, Tableau for the dashboards — to map hotspots, decode timing patterns, and recommend where the city should spend prevention dollars.</p>
+        <div class="chips">
+          <span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Tableau</span><span class="chip">Team of 5</span><span class="chip">Geospatial</span>
+        </div>
+        <div class="btns">
+          <a class="btn btn-primary" href="sf-crime.html">Read the case study <span class="ar">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature stacked reveal spot" style="margin-top:22px">
+      <div class="banner-wrap mc-banner">
+        <div class="mc-eyebrow">Campaign optimization · capstone</div>
+        <div class="mc-stats">
+          <div><span class="v">~$<span>500K</span></span><span class="k">potential savings</span></div>
+          <div><span class="v"><span>+8.54%</span></span><span class="k">conversion lift</span></div>
+        </div>
+        <div class="mc-title">Magic City Telecom</div>
+      </div>
+      <div class="fc">
+        <div class="kicker">Audience analytics · A/B testing · KPIs</div>
+        <h3>Magic City Telecom — Audience Analytics Capstone</h3>
+        <p>As an audience analyst on a four-team capstone, I ran segmentation, A/B testing, and CPA/CTR/CVR analysis that pointed a telecom's budget at the states and audiences that convert — surfacing ~$500K in potential savings and an 8.54% conversion lift.</p>
+        <div class="chips">
+          <span class="chip">Audience segmentation</span><span class="chip">A/B testing</span><span class="chip">CPA · CTR · CVR</span><span class="chip">Cross-functional</span>
+        </div>
+        <div class="btns">
+          <a class="btn btn-primary" href="magic-city.html">Read the case study <span class="ar">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature stacked reveal spot" style="margin-top:22px">
+      <div class="banner-wrap hoops-banner">
+        <div class="hb-eyebrow">2026 Eastern Conference Finals</div>
+        <div class="hb-score">NYK <span>4</span>–<span>0</span> CLE</div>
+        <div class="hb-title">Hoopinsights</div>
+      </div>
+      <div class="fc">
+        <div class="kicker">Data storytelling · Python + SQL</div>
+        <h3>Hoopinsights — Why the Knicks Swept Cleveland</h3>
+        <p>I pulled the real box scores from the Knicks' 4–0 sweep of Cleveland, built a Python + SQL pipeline to analyze them, and turned the numbers into a story anyone can follow — data analysis as plain-English narrative.</p>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Data pipeline</span><span class="chip">Data storytelling</span>
+        </div>
+        <div class="btns">
+          <a class="btn btn-primary" href="hoopinsights.html">Read the breakdown <span class="ar">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="ghost" aria-hidden="true">02</div>
+    <div class="sec-head"><span class="sec-num grad-text">02</span><h2>About</h2></div>
+    <p class="about-lede reveal">I'm a Business Analyst who ships working AI products, not slideware. At Fustech Consulting I built <b>TrajectIQ™</b> — a live AI career-intelligence platform — solo, plus four more AI apps, at zero infrastructure cost. Before that: I caught a <b>$9,022</b> commission loss before it happened, built an <b>833-firm</b> go-to-market database for C-suite leadership, and generated <b>$24,036</b> in revenue. Google-certified in Business Intelligence and AI Essentials. Looking for AI / Business / Operations Analyst roles.</p>
+  </section>
+
+  <section id="experience">
+    <div class="ghost" aria-hidden="true">03</div>
+    <div class="sec-head"><span class="sec-num grad-text">03</span><h2>Experience</h2></div>
+
+    <div class="xp">
+        <article class="role reveal">
+          <div class="role-date">March 2026 – Present</div>
+          <h3 class="role-title">AI Business Analyst</h3>
+          <div class="role-org">Fustech Consulting, LLC · Fort Lauderdale, FL</div>
+          <ul class="role-points">
+            <li>Built and launched <b>TrajectIQ™</b> by driving the full SDLC solo with Claude Code — requirements → architecture → <b>55 versioned iterations</b> → release QA audits → UAT with 40+ beta users → CI/CD deployment, at $0 infrastructure cost.</li>
+            <li>Analyzed the platform's first-week GA4 data — built the visitor→lead→signup conversion funnel (122 visitors → 34 leads, <b>28% visitor-to-lead</b>), traced acquisition to Instagram, LinkedIn, and direct links, and diagnosed a 58% homepage bounce. <a class="pt-link" href="growth-analytics.html">Read the full analysis ↗</a></li>
+            <li>Converted that analysis into a prioritized 30-day growth plan — lead-nurture emails to all 34 captured contacts, one-click shareable results, a homepage first-screen rework, and GA4 bot filtering with full-funnel event tracking.</li>
+            <li>Engineered the full auth &amp; security stack (Supabase, Google OAuth2, Row-Level Security) — the proprietary scoring engine stays server-side, never in the browser.</li>
+            <li>Shipped 3-tier subscription billing (PayPal) on launch day, plus 4 more production AI apps via GitHub Actions CI/CD.</li>
+            <li>Ran USPTO trademark research across 4 brand names — caught a conflict with a funded competitor and recommended the rename that avoided a six-figure dispute.</li>
+          </ul>
+        </article>
+
+        <article class="role reveal">
+          <div class="role-date">January 2026 – March 2026</div>
+          <h3 class="role-title">Data Analyst — Contract</h3>
+          <div class="role-org">NEO Architectural Lighting LLC · via PrideStaff · Hollywood, FL</div>
+          <ul class="role-points">
+            <li>Delivered an <b>833-firm</b> NYC market database (399 verified emails, 586 LinkedIn URLs) to C-suite leadership — campaign-ready, zero cleanup needed.</li>
+            <li>Caught missing data on a purchase order before entry — protecting <b>$9,022</b> in commission from an unrecoverable loss.</li>
+            <li>Caught a 53% European discount wrongly applied to a US contract and corrected the price before the order processed.</li>
+          </ul>
+        </article>
+
+        <article class="role reveal">
+          <div class="role-date">June 2025 – December 2025</div>
+          <h3 class="role-title">Account Manager</h3>
+          <div class="role-org">Pharmsource Wholesale · Sunrise, FL</div>
+          <ul class="role-points">
+            <li>Generated <b>$24,036</b> in revenue across 39 orders in 6 months — zero billing disputes.</li>
+            <li>Owned a 603-account pharmacy portfolio and managed the full order lifecycle in Oracle NetSuite with zero errors.</li>
+          </ul>
+        </article>
+
+        <article class="role reveal">
+          <div class="role-date">June 2023 – September 2024</div>
+          <h3 class="role-title">Case Analyst</h3>
+          <div class="role-org">NYC Department of Health &amp; Mental Hygiene · New York, NY</div>
+          <ul class="role-points">
+            <li>Maintained audit-ready case documentation — zero errors across all reporting cycles.</li>
+            <li>Sped up case resolution by proactively flagging progression gaps for supervisor escalation.</li>
+          </ul>
+        </article>
+
+        <article class="role reveal">
+          <div class="role-date">August 2024 – December 2024</div>
+          <h3 class="role-title">Data Analytics Fellow</h3>
+          <div class="role-org">COOP Careers — Data Analytics Fellowship · Miami, FL (Remote)</div>
+          <ul class="role-points">
+            <li>200+ hours of applied SQL, Tableau, and Advanced Excel training — 3 full analytics projects delivered.</li>
+          </ul>
+        </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="ghost" aria-hidden="true">04</div>
+    <div class="sec-head"><span class="sec-num grad-text">04</span><h2>Toolkit</h2></div>
+
+        <div class="skill-group reveal">
+          <div class="skill-key">Data &amp; Analytics</div>
+          <div class="chips"><span class="chip">SQL (PostgreSQL)</span><span class="chip">Python (ETL pipelines)</span><span class="chip">Advanced Excel (Pivot Tables, XLOOKUP, Macros, Power Query)</span><span class="chip">Tableau</span><span class="chip">Google Analytics 4</span><span class="chip">Relational data modeling</span><span class="chip">Data validation</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-key">Business Analysis</div>
+          <div class="chips"><span class="chip">SDLC &amp; iterative delivery</span><span class="chip">Gap analysis</span><span class="chip">UAT</span><span class="chip">QA / release audits</span><span class="chip">Stakeholder &amp; client management</span><span class="chip">Pricing &amp; business-case analysis</span><span class="chip">Market &amp; competitive research</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-key">AI</div>
+          <div class="chips"><span class="chip">Anthropic Claude API</span><span class="chip">Claude Code (AI pair-programming)</span><span class="chip">Prompt engineering</span><span class="chip">Agentic workflows</span><span class="chip">AI product management</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-key">Platforms &amp; Cloud</div>
+          <div class="chips"><span class="chip">Supabase (Auth, Postgres, Row-Level Security)</span><span class="chip">Netlify serverless</span><span class="chip">GitHub Actions CI/CD</span><span class="chip">OAuth2</span><span class="chip">PayPal billing</span><span class="chip">Oracle NetSuite CRM</span><span class="chip">SPS Commerce</span><span class="chip">Acctivate ERP</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-key">Certifications</div>
+          <div class="chips"><span class="chip">Google Business Intelligence</span><span class="chip">Google AI Essentials</span><span class="chip">Anthropic Claude 101</span><span class="chip">In progress: CompTIA Security+ &amp; Azure AZ-900 (June 2026)</span></div>
+        </div>
+  </section>
+
+  <section id="education">
+    <div class="sec-head"><span class="sec-num grad-text">05</span><h2>Education</h2></div>
+    <div class="edu reveal"><span><b>Florida International University</b> &nbsp;— Bachelor of Arts, International Relations</span><span class="where">Miami, FL</span></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="small">Get in touch</div>
+    <p class="big">Let's build<br>something <a href="mailto:delmanuelcruz@gmail.com">worth shipping.</a></p>
+    <button class="copy-email" id="copyEmail" type="button"><span id="copyLabel">delmanuelcruz@gmail.com — click to copy</span></button>
+    <div class="foot">
+      <a href="mailto:delmanuelcruz@gmail.com">delmanuelcruz@gmail.com</a>
+      <span>(954) 204-7025</span>
+      <a href="https://linkedin.com/in/delmanuelcruz" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://trajectiq.co" target="_blank" rel="noopener">trajectiq.co ↗</a>
+      <a href="Del_Manuel_Cruz_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+    </div>
+  </section>
+
+</div>
+
+<button class="top-btn" id="topBtn" type="button" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // nav state + progress bar + back-to-top
+  var nav=document.getElementById('nav'), prog=document.getElementById('progress'), topBtn=document.getElementById('topBtn');
+  var onScroll=function(){
+    nav.classList.toggle('scrolled', window.scrollY>20);
+    var max=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.width=(max>0?(window.scrollY/max)*100:0)+'%';
+    topBtn.classList.toggle('show', window.scrollY>600);
+  };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+  topBtn.addEventListener('click',function(){ window.scrollTo({top:0,behavior:reduced?'auto':'smooth'}); });
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // active nav link
+  var links=[].slice.call(document.querySelectorAll('.nav-links a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){so.observe(s);});
+
+  // rotating word
+  var words=['a Business Analyst','an AI Builder','a Data Storyteller','a Problem Solver'];
+  var rot=document.getElementById('rotator'), wi=0;
+  if(rot && !reduced){
+    setInterval(function(){
+      wi=(wi+1)%words.length;
+      rot.innerHTML='<span>'+words[wi]+'</span>';
+    },2600);
+  }
+
+  // count-up metrics
+  function animateCount(el){
+    var target=parseInt(el.getAttribute('data-count'),10);
+    var prefix=el.getAttribute('data-prefix')||'', suffix=el.getAttribute('data-suffix')||'', comma=el.getAttribute('data-comma');
+    var dur=1300, start=null;
+    function fmt(v){ var s=comma?v.toLocaleString('en-US'):String(v); return prefix+s+suffix; }
+    if(reduced || target===0){ el.textContent=fmt(target); return; }
+    function step(ts){
+      if(!start) start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=fmt(Math.round(target*eased));
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var mio=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){ e.target.querySelectorAll('[data-count]').forEach(animateCount); mio.unobserve(e.target); }
+  });},{threshold:0.4});
+  var m=document.getElementById('metrics'); if(m) mio.observe(m);
+
+  // pointer spotlight + tilt
+  function trackPointer(el){
+    el.addEventListener('pointermove',function(ev){
+      var r=el.getBoundingClientRect();
+      el.style.setProperty('--mx',(ev.clientX-r.left)+'px');
+      el.style.setProperty('--my',(ev.clientY-r.top)+'px');
+    });
+  }
+  if(!reduced){
+    document.querySelectorAll('.spot,.metric').forEach(trackPointer);
+    var tilt=document.querySelector('.feature.tilt');
+    if(tilt && window.matchMedia('(hover:hover)').matches){
+      tilt.addEventListener('pointermove',function(ev){
+        var r=tilt.getBoundingClientRect();
+        var rx=((ev.clientY-r.top)/r.height-0.5)*-2.4;
+        var ry=((ev.clientX-r.left)/r.width-0.5)*2.4;
+        tilt.style.transform='translateY(-4px) perspective(900px) rotateX('+rx+'deg) rotateY('+ry+'deg)';
+      });
+      tilt.addEventListener('pointerleave',function(){ tilt.style.transform=''; });
+    }
+  }
+
+  // copy email (with execCommand fallback)
+  var copyBtn=document.getElementById('copyEmail'), copyLabel=document.getElementById('copyLabel');
+  if(copyBtn){
+    copyBtn.addEventListener('click',function(){
+      var EMAIL='delmanuelcruz@gmail.com';
+      var done=function(){
+        copyBtn.classList.add('copied'); copyLabel.textContent='Copied to clipboard ✓';
+        setTimeout(function(){ copyBtn.classList.remove('copied'); copyLabel.textContent=EMAIL+' — click to copy'; },2200);
+      };
+      var fallback=function(){
+        var ta=document.createElement('textarea'); ta.value=EMAIL; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        try{ document.execCommand('copy'); }catch(e){}
+        document.body.removeChild(ta); done();
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(EMAIL).then(done,fallback); }
+      else{ fallback(); }
+    });
+  }
+})();
+</script>
+</body>
+</html>

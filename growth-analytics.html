@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TrajectIQ — Traffic & Lead Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--p1:#7D2AB8;--p2:#C8198A;--p3:#E8440E;--grad:linear-gradient(100deg,#7D2AB8,#C8198A 55%,#E8440E);
+ --ink:#1A1230;--muted:#6E6488;--line:#E7E1F2;--bg:#F7F5FB;--card:#fff;--good:#10b981;--warn:#E8440E}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hanken Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1020px;margin:0 auto;padding:34px 22px 70px}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.01em}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem}
+.mono{font-family:'JetBrains Mono',monospace}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p2);font-weight:600}
+.head{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:24px}
+.head .range{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--muted);margin-top:8px}
+.tldr{background:#fff;border:1px solid var(--line);border-left:4px solid;border-image:var(--grad) 1;border-radius:12px;padding:18px 22px;margin:0 0 34px;font-size:1.02rem}
+.tldr b{color:var(--p2)}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:38px}
+@media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.kpi .n{font-family:'Fraunces',serif;font-size:2rem;font-weight:600;line-height:1}
+.kpi .n.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.kpi .l{font-size:.78rem;color:var(--muted);margin-top:7px;line-height:1.35}
+section{margin-bottom:34px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.card h2{margin-bottom:3px}.card .sub{font-size:.85rem;color:var(--muted);margin-bottom:14px}
+.chartbox{position:relative;height:300px}
+.chartbox.sm{height:260px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.note-grid{display:grid;gap:12px}
+.insight{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.insight .t{font-weight:700;margin-bottom:3px}
+.insight .t.good{color:var(--good)}.insight .t.warn{color:var(--warn)}
+.insight p{font-size:.92rem;color:var(--muted)}
+.act{counter-reset:a;display:grid;gap:12px}
+.action{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 54px;position:relative}
+.action::before{counter-increment:a;content:counter(a);position:absolute;left:16px;top:16px;width:26px;height:26px;border-radius:50%;background:var(--grad);color:#fff;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.8rem;display:grid;place-items:center}
+.action b{display:block;margin-bottom:3px}.action p{font-size:.9rem;color:var(--muted)}
+.sec-title{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;margin-bottom:16px}
+.foot{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div style="max-width:1020px;margin:0 auto;padding:20px 22px 0;display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:.04em">
+  <a href="index.html" style="color:#6E6488;text-decoration:none">← Back to portfolio</a>
+  <span style="color:#1A1230;font-weight:600">Del Manuel Cruz</span>
+</div>
+<div class="wrap">
+
+  <div class="head">
+    <div class="eyebrow">TrajectIQ · Google Analytics 4</div>
+    <h1>How trajectiq.co is doing — its first week live.</h1>
+    <div class="range">Launched ~early June 2026 · GA4 window May 12 – Jun 8 — nearly all of this is the first week live</div>
+  </div>
+
+  <div class="tldr">
+    In just its first week live, TrajectIQ pulled in <b>122 visitors</b> and turned <b>34 into leads</b> (≈<b>28%</b> gave their email) — a strong rate for a brand-new free tool. Traffic came mostly from <b>Instagram, LinkedIn, and direct links</b>. Work on two things: <b>fewer people bouncing off the homepage</b>, and <b>turning free users into paying ones</b>.
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="n g">122</div><div class="l">Visitors (active users)</div></div>
+    <div class="kpi"><div class="n g">34</div><div class="l">Leads captured (emails)</div></div>
+    <div class="kpi"><div class="n g">28%</div><div class="l">Visitor → lead rate</div></div>
+    <div class="kpi"><div class="n">1m 35s</div><div class="l">Avg. time on site</div></div>
+    <div class="kpi"><div class="n">1.4K</div><div class="l">Total actions tracked</div></div>
+  </div>
+
+  <section class="card">
+    <h2>The journey — where people drop off</h2>
+    <div class="sub">Each step is fewer people than the last — the biggest drop is visitor → lead, and the next lever is converting interest into accounts.</div>
+    <div class="chartbox"><canvas id="funnel"></canvas></div>
+  </section>
+
+  <div class="two">
+    <section class="card">
+      <h2>Where visitors came from</h2>
+      <div class="sub">Acquisition by source (new users).</div>
+      <div class="chartbox sm"><canvas id="sources"></canvas></div>
+    </section>
+    <section class="card">
+      <h2>Most-viewed pages</h2>
+      <div class="sub">Page views over the month.</div>
+      <div class="chartbox sm"><canvas id="pages"></canvas></div>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>What people did on the site</h2>
+    <div class="sub">Tracked events — note <b style="color:var(--p3)">generate_lead</b> (34): the emails you captured.</div>
+    <div class="chartbox"><canvas id="events"></canvas></div>
+  </section>
+
+  <section>
+    <div class="sec-title">What the numbers say (plain English)</div>
+    <div class="note-grid">
+      <div class="insight"><div class="t good">✓ The free assessment hook works.</div><p>Nearly 1 in 3 visitors handed over their email to see results — a high rate for a cold launch. The email-gate was the right call.</p></div>
+      <div class="insight"><div class="t good">✓ Social is your engine.</div><p>Instagram and LinkedIn drive real referrals, and most "direct" visits are people clicking your posted links and DMs. Your posts are working.</p></div>
+      <div class="insight"><div class="t warn">! Half leave the homepage fast.</div><p>Homepage bounce is ~58%. The first screen needs to sell the value and the "start" button faster.</p></div>
+      <div class="insight"><div class="t warn">! The free → paid path is the opportunity.</div><p>People are reaching pricing and starting accounts — the next lever is converting that interest into subscriptions, with clearer paid value and a frictionless checkout.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title">What to do to push trajectiq.co (next 30 days)</div>
+    <div class="act">
+      <div class="action"><b>Keep posting — and post more.</b><p>Social is what's bringing people. 2–3 posts/week on LinkedIn + Instagram, re-sharing the assessment with a fresh hook. Cheapest growth lever you have.</p></div>
+      <div class="action"><b>Make the homepage's first screen punchier.</b><p>To cut the 58% bounce: one clear value sentence + a big "Start the free quiz" button visible without scrolling.</p></div>
+      <div class="action"><b>Turn results into shares.</b><p>Add a one-click "Share my Career Type" button at the end. Every share is free new traffic — your users become your marketers.</p></div>
+      <div class="action"><b>Convert interest into subscriptions.</b><p>On the results page, show "what Pro unlocks" + a limited-time founding price, and keep checkout frictionless — that's where pricing interest turns into revenue.</p></div>
+      <div class="action"><b>Email the 34 leads.</b><p>You captured 34 emails — an audience. Send a short follow-up (their result + one tip + a soft Pro mention).</p></div>
+      <div class="action"><b>Clean up the data.</b><p>Turn on GA4 bot filtering (data-center traffic inflates the count) and add "viewed results / clicked upgrade / purchased" events so next month shows exact paid drop-off.</p></div>
+    </div>
+  </section>
+
+  <div class="foot">Source: Google Analytics 4 — TrajectIQ property · GA4 window May 12 – Jun 8, 2026; site launched ~early June, so this reflects roughly the first week live · Small early sample + some bot traffic — read as direction, not precision.</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<script>
+(function(){
+  if(!window.Chart) return;
+  Chart.register(ChartDataLabels);
+  Chart.defaults.font.family = "'Hanken Grotesk', sans-serif";
+  Chart.defaults.color = '#1A1230';
+  var P1='#7D2AB8', P2='#C8198A', P3='#E8440E', GRY='#CFC6DE';
+  var off={legend:{display:false}};
+
+  // Funnel — horizontal bar
+  new Chart(document.getElementById('funnel'), {
+    type:'bar',
+    data:{ labels:['Visited the site','Took the assessment','Became a lead (email)','Checked pricing','Started an account'],
+      datasets:[{ data:[122,113,34,18,10],
+        backgroundColor:['#7D2AB8','#9A2BA6','#C8198A','#D83A66','#E8440E'],
+        borderRadius:6, barThickness:28 }]},
+    options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{display:false},
+        datalabels:{ anchor:'end', align:'end', color:'#1A1230', font:{family:"'JetBrains Mono'",weight:600,size:12},
+          formatter:function(v){ return v; } },
+        tooltip:{enabled:true} },
+      scales:{ x:{ beginAtZero:true, grid:{display:false}, ticks:{display:false}, max:135 },
+        y:{ grid:{display:false}, ticks:{font:{size:12.5}} } } }
+  });
+
+  // Sources — doughnut
+  new Chart(document.getElementById('sources'), {
+    type:'doughnut',
+    data:{ labels:['Direct / links / DMs','Instagram','LinkedIn','Facebook'],
+      datasets:[{ data:[102,10,9,1], backgroundColor:[P1,P2,P3,GRY], borderColor:'#fff', borderWidth:2 }]},
+    options:{ responsive:true, maintainAspectRatio:false, cutout:'58%',
+      plugins:{ legend:{position:'right',labels:{boxWidth:12,font:{size:12}}},
+        datalabels:{ color:'#fff', font:{family:"'JetBrains Mono'",weight:600,size:12},
+          formatter:function(v){ return v>2 ? v : ''; } } } }
+  });
+
+  // Top pages — horizontal bar
+  new Chart(document.getElementById('pages'), {
+    type:'bar',
+    data:{ labels:['Free Assessment (home)','Sign In','Career Analyzer','Results Dashboard','Pricing','Create Account','Gap Analysis'],
+      datasets:[{ data:[242,89,56,53,36,21,20], backgroundColor:P1, borderRadius:5, barThickness:16 }]},
+    options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{display:false},
+        datalabels:{ anchor:'end', align:'end', color:'#1A1230', font:{family:"'JetBrains Mono'",weight:600,size:11}, formatter:function(v){return v;} } },
+      scales:{ x:{ beginAtZero:true, grid:{display:false}, ticks:{display:false}, max:270 },
+        y:{ grid:{display:false}, ticks:{font:{size:11}} } } }
+  });
+
+  // Events — vertical bar (highlight generate_lead)
+  new Chart(document.getElementById('events'), {
+    type:'bar',
+    data:{ labels:['page_view','user_engagement','session_start','scroll','first_visit','generate_lead','form_start'],
+      datasets:[{ data:[555,278,182,175,125,34,28],
+        backgroundColor:['#7D2AB8','#7D2AB8','#7D2AB8','#7D2AB8','#7D2AB8','#E8440E','#C8198A'], borderRadius:5 }]},
+    options:{ responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{display:false},
+        datalabels:{ anchor:'end', align:'top', color:'#1A1230', font:{family:"'JetBrains Mono'",weight:600,size:11}, formatter:function(v){return v;} } },
+      scales:{ x:{ grid:{display:false}, ticks:{font:{size:10.5}} },
+        y:{ beginAtZero:true, grid:{color:'#F0ECF7'}, ticks:{display:false}, suggestedMax:620 } } }
+  });
+})();
+</script>
+</body>
+</html>
