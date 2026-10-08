@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>San Francisco Crime Analysis — Case Study | Del Manuel Cruz</title>
 <meta name="description" content="A five-person data team analyzed San Francisco's 2018 crime data with SQL, Python, and Tableau to find hotspots, patterns, and funding recommendations.">
+<meta property="og:title" content="Addressing Crime in San Francisco — Case Study">
+<meta property="og:description" content="A five-person team turned a year of SF incident data into hotspots, timing patterns, and a funding plan — SQL, Python, and Tableau.">
+<meta property="og:url" content="https://delmanuelcruz.com/sf-crime.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://delmanuelcruz.com/sf-crime-map.png">
+<meta property="og:image:width" content="1528">
+<meta property="og:image:height" content="849">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B0711">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%239D4EDD'/%3E%3Cstop offset='.55' stop-color='%23C8198A'/%3E%3Cstop offset='1' stop-color='%23E8440E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230B0711'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='url(%23g)' text-anchor='middle'%3EDC%3C/text%3E%3C/svg%3E">
 <script>document.documentElement.className='js';</script>
@@ -66,6 +74,11 @@ section{padding:46px 0;scroll-margin-top:70px}
 /* figure */
 .fig{margin:8px 0 0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 24px 60px rgba(8,4,14,0.5)}
 .fig img{width:100%;display:block}
+.fig{display:flex;flex-direction:column}
+.fig .zoom{position:relative;display:flex;flex:1;align-items:center;background:#fff;cursor:zoom-in}
+.fig .zoom img{object-fit:contain}
+.fig .zoom::after{content:"Open full size ↗";position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:#fff;background:rgba(11,7,17,.78);border-radius:999px;padding:6px 10px;opacity:0;transition:opacity .2s}
+.fig .zoom:hover::after,.fig .zoom:focus-visible::after{opacity:1}
 .fig .cap{background:var(--bg2);color:var(--muted);font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;padding:12px 16px;border-top:1px solid var(--line)}
 .fig .cap b{color:var(--ink);font-weight:600}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
@@ -126,17 +139,17 @@ footer a{color:#E8A0CE}footer a:hover{color:#fff}
   <section>
     <div class="sec-head"><span class="sec-num grad-text">03</span><h2>What the data showed</h2></div>
     <div class="fig reveal">
-      <img src="sf-crime-map.png" alt="Tableau map of San Francisco neighborhoods sized by incident count and colored by crime category.">
+      <a class="zoom" href="sf-crime-map.png" target="_blank" rel="noopener"><img src="sf-crime-map.png" alt="Tableau map of San Francisco neighborhoods sized by incident count and colored by crime category."></a>
       <div class="cap"><b>Where.</b> Incidents cluster hard in the northeast — Mission, Tenderloin, and the Financial District carry the load. Treasure Island and Seacliff are near-empty by comparison.</div>
     </div>
 
     <div class="two">
       <div class="fig reveal">
-        <img src="sf-crime-trend.png" alt="Line chart of monthly crime counts by neighborhood across 2018.">
+        <a class="zoom" href="sf-crime-trend.png" target="_blank" rel="noopener"><img src="sf-crime-trend.png" alt="Line chart of monthly crime counts by neighborhood across 2018."></a>
         <div class="cap"><b>When.</b> Mission leads every month; counts rise from summer into fall and spike around major holidays.</div>
       </div>
       <div class="fig reveal">
-        <img src="sf-crime-resolution.png" alt="Stacked bar chart of case resolution types across police districts.">
+        <a class="zoom" href="sf-crime-resolution.png" target="_blank" rel="noopener"><img src="sf-crime-resolution.png" alt="Stacked bar chart of case resolution types across police districts."></a>
         <div class="cap"><b>Outcome.</b> Across every district, open/unresolved cases (purple) outnumber resolved ones — crime is reported faster than it's cleared.</div>
       </div>
     </div>
